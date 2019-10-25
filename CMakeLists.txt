@@ -1,18 +1,33 @@
 cmake_minimum_required(VERSION 3.1)
 
 include("./config/napi.cmake")
+include("./config/apple.cmake")
 set(PLUGIN_ADDON_NAME "nodegui_plugin_macos_utils")
 
 project(${PLUGIN_ADDON_NAME})
+
+set(OS_SPECIFIC_SRC "")
+if(APPLE)
+    set(OS_SPECIFIC_SRC 
+        "${PROJECT_SOURCE_DIR}/src/cpp/Dock/dock.mm"
+    )
+else()
+    set(OS_SPECIFIC_SRC 
+        "${PROJECT_SOURCE_DIR}/src/cpp/Dock/dock.cpp"
+    )
+endif()
 
 add_library(${PLUGIN_ADDON_NAME} SHARED  
     "${CMAKE_JS_SRC}"
     "${PROJECT_SOURCE_DIR}/src/cpp/main.cpp"
     "${PROJECT_SOURCE_DIR}/src/cpp/Dock/dock_wrap.cpp"
-    "${PROJECT_SOURCE_DIR}/src/cpp/Dock/dock.hpp"
+    "${OS_SPECIFIC_SRC}"
 ) 
 
 AddNapiSupport(${PLUGIN_ADDON_NAME})
+if (APPLE) 
+    AddAppleSupport(${PLUGIN_ADDON_NAME})
+endif()
 
 target_include_directories(${PLUGIN_ADDON_NAME} PRIVATE 
     "${PROJECT_SOURCE_DIR}"

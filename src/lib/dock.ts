@@ -1,11 +1,10 @@
 import addon from "./utils/addon";
 
 export class Dock {
-  native = new addon.Dock();
-  show() {
-    this.native.show();
+  static show() {
+    addon.Dock.show();
   }
-  hide() {
-    this.native.hide();
+  static hide() {
+    addon.Dock.hide();
   }
 }
