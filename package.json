@@ -1,5 +1,5 @@
 {
-  "name": "nodegui-macos-utils",
+  "name": "nodegui-os-utils",
   "version": "1.0.0",
   "description": "A NodeGui native plugin for managing macOS native apis",
   "main": "dist/index.js",

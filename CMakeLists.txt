@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.1)
 
 include("./config/napi.cmake")
 include("./config/apple.cmake")
-set(PLUGIN_ADDON_NAME "nodegui_plugin_macos_utils")
+set(PLUGIN_ADDON_NAME "nodegui_os_utils")
 
 project(${PLUGIN_ADDON_NAME})
 
