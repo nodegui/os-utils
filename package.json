@@ -9,14 +9,12 @@
     "build:addon": "cross-env CMAKE_BUILD_PARALLEL_LEVEL=8 cmake-js compile",
     "dev": "npm run build && qode dist/demo.js"
   },
-  "dependencies": {
-    "cmake-js": "^5.3.2",
-    "cross-env": "^6.0.0",
-    "node-addon-api": "^1.7.1"
-  },
   "devDependencies": {
     "@nodegui/qode": "^1.0.5",
     "@types/node": "^12.7.5",
+    "cmake-js": "^5.3.2",
+    "cross-env": "^6.0.0",
+    "node-addon-api": "^1.7.1",
     "typescript": "^3.6.3"
   },
   "author": "Atul R",
