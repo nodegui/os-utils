@@ -1,7 +1,9 @@
 #include "src/cpp/Dock/dock_wrap.h"
+#include "src/cpp/AboutPanel/about_panel_wrap.h"
 
 Napi::Object Main(Napi::Env env, Napi::Object exports) {
     DockWrap::init(env, exports);
+    AboutPanelWrap::init(env, exports);
     return exports;
 }
 
