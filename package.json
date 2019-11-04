@@ -1,7 +1,7 @@
 {
   "name": "@nodegui/nodegui-os-utils",
   "version": "1.0.0",
-  "description": "A NodeGui native plugin for managing macOS native apis",
+  "description": "A helper module which contains OS specific native features.",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "scripts": {
