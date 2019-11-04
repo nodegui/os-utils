@@ -7,7 +7,7 @@
   "repository": "git@github.com/nodegui/os-utils.git",
   "homepage": "https://github.com/nodegui/os-utils",
   "scripts": {
-    "prepublishOnly": "npm run build",
+    "prepublishOnly": "rimraf dist && npm run build",
     "build": "tsc && npm run build:addon",
     "build:addon": "cross-env CMAKE_BUILD_PARALLEL_LEVEL=8 cmake-js compile",
     "dev": "npm run build && qode dist/demo.js"
@@ -23,6 +23,7 @@
     "ink": "^2.5.0",
     "ink-select-input": "^3.1.2",
     "react": "^16.11.0",
+    "rimraf": "^3.0.0",
     "typescript": "^3.6.3"
   },
   "author": "Atul R",
