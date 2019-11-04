@@ -11,21 +11,32 @@ npm install @nodegui/nodegui-os-utils
 # Usage
 
 ```js
-import { Dock } from "@nodegui/nodegui-os-utils";
+import { Dock } from "@nodegui/os-utils";
 
-console.log("Showing the Dock Icon on MacOS");
+console.log("Showing the Dock icon on macOS");
 Dock.show();
-console.log("Hiding the Dock Icon on MacOS");
+console.log("Hiding the Dock icon on macOS");
 Dock.hide();
+```
+```js
+import { AboutPanel } from "@nodegui/os-utils";
+
+console.log("Open the about panel on macOS");
+AboutPanel.open();
+console.log("Open the about panel on macOS with modified defaults");
+AboutPanel.open({ name: "Custom name", version: "2.3.5" });
 ```
 
 # Supported APIs
 
-## MacOS
+## macOS
 
 - Dock
-  - `show()` - static method - Shows the dock icon of the nodegui app on macos. Noop on other platforms.
-  - `hide()` - static method - Hides the dock icon of the nodegui app on macos. Noop on other platforms.
+  - `show()` - static method - Shows the Dock icon on macOS. Does nothing on other platforms.
+  - `hide()` - static method - Hides the Dock icon on macOS. Does nothing on other platforms.
+
+- AboutPanel
+  - `open(options?: object)` - static method - Opens the about panel on macOS. Does nothing on other platforms. `options` is optional and can contain the following strings: `name`, `version`, `applicationVersion`, and `copyright`. The default values are derived from `Info.plist`.
 
 # License
 
