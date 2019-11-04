@@ -1,0 +1,7 @@
+dist/demo.js
+dist/demo.d.ts
+src/**/*.ts
+src/**/*.tsx
+build/
+.vscode/
+tsconfig.json
