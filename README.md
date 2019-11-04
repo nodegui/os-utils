@@ -1,11 +1,13 @@
-# nodegui-os-utils
+# os-utils
+
+[![npm version](https://img.shields.io/npm/v/@nodegui/os-utils.svg)](https://www.npmjs.com/package/@nodegui/os-utils)
 
 A helper module which contains OS specific native features.
 
 # Installation
 
 ```
-npm install @nodegui/nodegui-os-utils
+npm install @nodegui/os-utils
 ```
 
 # Usage

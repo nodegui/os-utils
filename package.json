@@ -1,9 +1,11 @@
 {
-  "name": "@nodegui/nodegui-os-utils",
   "version": "1.0.0",
+  "name": "@nodegui/os-utils",
   "description": "A helper module which contains OS specific native features.",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
+  "repository": "git@github.com/nodegui/os-utils.git",
+  "homepage": "https://github.com/nodegui/os-utils",
   "scripts": {
     "build": "tsc && npm run build:addon",
     "build:addon": "cross-env CMAKE_BUILD_PARALLEL_LEVEL=8 cmake-js compile",
