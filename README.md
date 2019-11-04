@@ -4,13 +4,13 @@
 
 A helper module which contains OS specific native features.
 
-# Installation
+## Installation
 
 ```
 npm install @nodegui/os-utils
 ```
 
-# Usage
+## Usage
 
 ```js
 import { Dock } from "@nodegui/os-utils";
@@ -29,9 +29,9 @@ console.log("Open the about panel on macOS with modified defaults");
 AboutPanel.open({ name: "Custom name", version: "2.3.5" });
 ```
 
-# Supported APIs
+## Supported APIs
 
-## macOS
+### macOS
 
 - Dock
   - `show()` - static method - Shows the Dock icon on macOS. Does nothing on other platforms.
@@ -40,6 +40,6 @@ AboutPanel.open({ name: "Custom name", version: "2.3.5" });
 - AboutPanel
   - `open(options?: object)` - static method - Opens the about panel on macOS. Does nothing on other platforms. `options` is optional and can contain the following strings: `name`, `version`, `applicationVersion`, and `copyright`. The default values are derived from `Info.plist`.
 
-# License
+## License
 
 MIT
