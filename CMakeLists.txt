@@ -11,11 +11,13 @@ if(APPLE)
     set(OS_SPECIFIC_SRC 
         "${PROJECT_SOURCE_DIR}/src/cpp/Dock/dock.mm"
         "${PROJECT_SOURCE_DIR}/src/cpp/AboutPanel/about_panel.mm"
+        "${PROJECT_SOURCE_DIR}/src/cpp/Info/info.mm"
     )
 else()
     set(OS_SPECIFIC_SRC 
         "${PROJECT_SOURCE_DIR}/src/cpp/Dock/dock.cpp"
         "${PROJECT_SOURCE_DIR}/src/cpp/AboutPanel/about_panel.cpp"
+        "${PROJECT_SOURCE_DIR}/src/cpp/Info/info.cpp"
     )
 endif()
 
@@ -24,6 +26,7 @@ add_library(${PLUGIN_ADDON_NAME} SHARED
     "${PROJECT_SOURCE_DIR}/src/cpp/main.cpp"
     "${PROJECT_SOURCE_DIR}/src/cpp/Dock/dock_wrap.cpp"
     "${PROJECT_SOURCE_DIR}/src/cpp/AboutPanel/about_panel_wrap.cpp"
+    "${PROJECT_SOURCE_DIR}/src/cpp/Info/info_wrap.cpp"
     "${OS_SPECIFIC_SRC}"
 ) 
 

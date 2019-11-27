@@ -1,6 +1,6 @@
 {
   "name": "@nodegui/os-utils",
-  "version": "1.0.2",
+  "version": "1.1.2",
   "description": "A helper module which contains OS specific native features.",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
