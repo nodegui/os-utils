@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "@nodegui/qode": "^1.0.5",
-    "@types/node": "^12.7.5",
+    "@types/node": "^14.0.5",
     "ink": "^2.5.0",
     "ink-select-input": "^3.1.2",
     "react": "^16.11.0",
